@@ -1,6 +1,6 @@
 [package]
 name = "common"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2021"
 authors = [ "Softbear, Inc." ]
 license = "AGPL-3.0-or-later"
@@ -12,7 +12,7 @@ default = [ "server" ]
 [dependencies]
 flagset = "0.4"
 fxhash = "0.2.1"
-kodiak_common = { git = "https://github.com/softbearstudios/kodiak", tag="0.1.0" }
+kodiak_common = { git = "https://github.com/softbearstudios/kodiak", tag="0.1.1" }
 macros = { path = "../macros" }
 num-integer = "0.1.45"
 num_enum = "0.5"

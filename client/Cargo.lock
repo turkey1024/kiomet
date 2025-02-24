@@ -310,14 +310,6 @@ dependencies = [
  "bitcode",
  "rand",
  "serde",
-]
-
-[[package]]
-name = "cub"
-version = "0.1.12"
-source = "git+ssh://git@gitlab.com/softbeargames/cub.git?rev=89ea7bb9e5f4578fe0f5ac33107ff71995b7c912#89ea7bb9e5f4578fe0f5ac33107ff71995b7c912"
-dependencies = [
- "serde",
  "yew",
 ]
 
@@ -1162,7 +1154,7 @@ version = "0.1.0"
 dependencies = [
  "bytemuck",
  "console_error_panic_hook",
- "cub 0.1.12 (git+ssh://git@gitlab.com/softbeargames/cub.git?rev=89ea7bb9e5f4578fe0f5ac33107ff71995b7c912)",
+ "cub",
  "getrandom",
  "glam 0.22.0",
  "gloo 0.8.1",
@@ -1543,11 +1535,11 @@ dependencies = [
 
 [[package]]
 name = "plasma_protocol"
-version = "0.1.2"
+version = "0.1.0"
 dependencies = [
  "arrayvec 0.7.6",
  "bitcode",
- "cub 0.1.12 (git+https://github.com/softbearstudios/cub?tag=0.1.12)",
+ "cub",
  "derive_more",
  "hyperloglog",
  "minicdn",

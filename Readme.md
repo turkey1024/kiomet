@@ -31,7 +31,7 @@ make release
 7. Build and run server
 
 ```console
-cd client
+cd server
 make run_release
 ```
 
