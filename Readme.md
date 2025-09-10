@@ -14,8 +14,11 @@
 1. Install `rustup` ([see instructions here](https://rustup.rs/))
 2. Install `gmake` and `gcc` if they are not already installed.
 3. Install `trunk` (`cargo install --locked trunk --version 0.17.5`)
-4. Run `download_makefiles.sh`
-5. Install Rust Nightly and the WebAssembly target
+5. Run `download_makefiles.sh`
+
+> [!WARNING]
+> This step is currently broken. You will have to debug the downloaded Makefiles (which are too recent) to remove unsupported trunk options, or you could use a later version of trunk like 0.21. This will be fixed in the next open source release!
+7. Install Rust Nightly and the WebAssembly target
 
 ```console
 make rustup
