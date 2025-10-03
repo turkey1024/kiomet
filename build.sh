@@ -1,26 +1,24 @@
-#!/bin/bash
+k#!/bin/bash
 set -e
 
 echo "🚀 开始构建 Kiomet 服务器..."
 
-# 设置 PATH（无论 Rust 是否已安装）
-export PATH="$HOME/.cargo/bin:$PATH"
+# 设置用户目录安装路径
+export CARGO_HOME="$HOME/.cargo"
+export RUSTUP_HOME="$HOME/.rustup"
+export PATH="$CARGO_HOME/bin:$PATH"
 
 # 检查并安装 Rust
 if ! command -v cargo &> /dev/null; then
-    echo "📦 安装 Rust..."
-    curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
-    export PATH="$HOME/.cargo/bin:$PATH"
+    echo "📦 在用户目录安装 Rust..."
+    curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y --default-toolchain nightly --no-modify-path
+    export PATH="$CARGO_HOME/bin:$PATH"
 fi
 
-# 验证 Rust 安装
-cargo --version || {
-    echo "❌ Rust 安装失败"
-    exit 1
-}
+# 验证安装
+cargo --version
 
-# 设置 nightly 工具链
-echo "🦀 设置 Nightly Rust..."
+# 确保使用 nightly
 rustup default nightly
 rustup target add wasm32-unknown-unknown
 
