@@ -1884,7 +1884,7 @@ dependencies = [
 
 [[package]]
 name = "minicdn"
-version = "0.2.4"
+version = "0.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "e404856f1d703135d31a48ce77e42ab386ed9aa286161460a5a1a14e94e1f47d"
 dependencies = [
